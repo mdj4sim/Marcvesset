@@ -1,0 +1,1156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+    --blue: #1e90ff;
+    --gold-primary: rgb(228, 172, 66);
+    --gold-secondary : rgb(240, 191, 99);
+    --green-primary: rgb(33, 213, 132);
+    --black-trans : rgba(0, 0, 0, 0.777);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    /* 1rem = 10px */
+    font-size: 62.5%; 
+    font-family: "Lato", sans-serif;
+}
+
+/* hidden objects */
+.hidden{
+    display: none !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 4rem 4rem 0 4rem; 
+    background-image: url("../src/photos/back_1.jpg") ;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ddd;
+    position: relative;
+}
+
+/* ############# NAVBAR #############*/
+.ct-navbar{
+    height: 12rem;
+    display: flex;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: black;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ct-navbar img{
+    height: 18rem;
+    max-width: auto;
+    /* filter: drop-shadow(5px 1px 2px #eaeaec87); */
+    filter: drop-shadow(2px 2px 30px #ffffff6d);
+}
+
+.ct-h--bio{
+    /* background-color: #333333; */
+    padding: 4rem;
+    background-color: var(--black-trans);
+}
+
+.ct-h--bio > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.ct-h--bio p{
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+.ct-h--bio h3{
+    font-size: 4.4rem;
+    margin-bottom: 2rem;
+    color: var(--gold-secondary);
+    text-align: center;
+}
+
+
+
+.ct-nav--links {
+    display: flex;
+    list-style: none;
+    margin-right: 4rem;
+}
+
+.ct-nav--links li:not(:last-child){
+    padding-right: 5.6rem;
+}
+
+
+.ct-nav--links li a:link,
+.ct-nav--links li a:visited{
+    color: var(--gold-secondary);
+}
+
+
+/* ############ About ########### */
+.ct-about, .ct-home, .ct-cart, .ct-contact, .ct-shop,
+.ct-ticket, .ct-trophy{
+    padding: 4rem;
+}
+
+/* HOME */
+
+.background-video{
+    background-color: #a199992c;
+    padding: 4rem;
+    margin: 4rem 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60rem;
+    gap: 2rem;
+}
+
+.background-video img{
+    height: 90%;
+    width: auto;
+}
+
+.background-video video{
+    border-radius: 50px;
+    height: 90%;
+    width: 40%;
+    width: fit-content;
+}
+
+
+
+
+/* PERSONAL */
+
+.ct-aPersonal{
+    background-color: black;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-aPersonal--name{
+    font-size: 6.4rem;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ct-aPersonal--name span{
+    font-size: 160%;
+    letter-spacing: -20px;
+    color: var(--green-primary);
+
+}
+
+.ct-aPersonal--name span:first-child{
+    letter-spacing: -2px;
+
+}
+
+.ct-aPersonal--more{
+    font-size: 1.8rem;
+    display: flex;
+    padding-top: 2rem;
+}
+
+.ct-aPersonal--more p:not(:last-child){
+    margin-right: 14px;
+}
+ 
+.ct-aPersonal--more p:not(:first-child){
+    padding-left: 1rem;
+}
+
+.ct-aPersonal--selfImg img{
+    height: 40rem;
+    filter: drop-shadow(2px 2px 100px #ffffff6d);
+}
+
+/* STATS */
+
+.ct-playerStats{
+    background-color: rgba(65, 62, 62, 0.134);
+    padding: 6rem;
+    color: var(--green-primary);
+    font-weight: 700;
+}
+
+.ct-pStats--head{
+    font-size: 4.4rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+}
+
+.ct-pStats--head span:first-child{
+    color: rgb(202, 220, 219);
+}
+
+.ct-pStats--head span:last-child{
+    color: var(--gold-primary);
+}
+
+.ct-pStats--data{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5rem 5rem 5rem;
+    gap: 5rem 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.ct-pStats--data li{
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-pStats--data li p:first-child{
+    font-size: 5.8rem;
+    color: var(--gold-primary);
+    font-weight: 900;
+}
+
+.ct-pStats--data li p:last-child{
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgb(6, 82, 49);
+}
+
+
+/* AWARDS AND HONORS */
+
+.ct-aHonor{
+    background-color: var(--black-trans);
+    display: flex;
+}
+
+.ct-ah--head{
+    max-width: 50%;
+    font-size: 4.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5rem;
+    padding: 2rem;
+    background-color: var(--gold-primary);
+    border-radius: 10px;
+    clip-path: polygon(85% 0, 100% 45%, 85% 100%, 0 100%, 0 0);
+}
+
+.ct-ah--head span{
+    color: white;
+}
+
+.ct-ah--list{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.ct-ah--list > div > h3 {
+    color: var(--gold-primary);
+}
+
+.ct-ah--list > div > div p {
+    margin-top: 0.8rem;
+}
+
+.ct-ah--list h3{
+    font-size: 2rem;
+}
+
+.ct-ah--list p{
+    font-size: 1.4rem;
+}
+
+.ct-ah--list img{
+    height: 20rem;
+    width: 20rem;
+}
+
+/* AChievements */
+.ct-records{
+    padding: 20rem 0 10rem 0;
+    background-color: var(--black-trans);    
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-records h2{
+    text-align: center;
+    font-size: 5.2rem;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+
+.ct-records h2 span{
+    color: var(--gold-secondary);
+}
+
+
+.ct-record--sub{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.ct-record--sub  img{
+    max-width: 70%;
+    justify-self: center;
+}
+
+.ct-rAchieve{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.4rem;
+}
+
+
+.ct-rAchieve > div > p:not(:first-child){
+    font-size: 1.8rem;
+}
+
+
+.ct-rAchieve > div > p:first-child{
+    font-weight: 900;
+    font-size: 4.4rem;
+    color: var(--green-primary) !important;
+}
+
+.ct-rAchieve div p:not(:first-child) span {
+    color: var(--gold-secondary);
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+
+/* Season STats */
+
+.ct-seasonStats {
+    background-color: rgba(26, 23, 23, 0.785);
+    padding: 10rem 5rem;
+}
+
+.ct-seasonStats h2{
+    text-align: center;
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    color: var(--gold-secondary);
+}
+  
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.4rem 0;
+    font-size: 1.6rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+  
+table tbody tr:hover {
+    background-color: #46434355;
+}
+  
+table th, table td:first-child {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #ddd;
+}
+  
+/* miscellaneous */
+
+.ct-misc{
+    padding: 10rem 5rem;
+    background-color: rgba(0, 0, 0, 0.86);
+
+}
+
+.ct-misc > h2{
+    font-size: 5.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.ct-misc > h2 span{
+    color: var(--green-primary);
+}
+
+.ct-misc--div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.ct-misc--div h3{
+    font-size: 3rem;
+    color: var(--gold-secondary);
+}
+
+.ct-misc--div p{
+    font-size: 2rem;
+    text-align: justify;
+}
+
+
+footer {
+    height: fit-content;
+    width: 100%;
+    background-color: #333333;
+    padding: 1rem;
+    margin-top: 1rem;
+    
+}
+
+p.copyright {
+    color: #fff;
+    line-height: 40px;
+    font-size: 1.4rem;
+    text-align: center;
+    bottom:0;
+}
+
+
+
+/* ########## CART ITEM CARD ########## */
+
+
+.ct-cart--block{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.ct-cart--head,
+.ct-shop h3,
+.ct-ticket h3,
+.ct-contact > h3{
+    font-size: 2.4rem;
+    padding-bottom: 2.4rem;
+    font-weight: 900;
+    box-shadow: 0px 2px 0px rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.ct-cc--merchandise,
+.ct-cc--ticket{
+    font-size: 2.4rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 2px rgb(253, 253, 253);
+    font-weight: 900;
+    width: 100%;
+}
+
+.ct-cc--merchandise{
+    background-color: #1e8fff7d;
+}
+
+.ct-cc--merchandise select,
+.ct-cc--ticket select{
+    border: none;
+    font-size: 2rem;
+    width: 4rem;
+    text-align: end;
+    border-radius: 10px;
+}
+
+.ct-cc--ticket{
+    background-color: var(--black-trans);
+}
+
+.ct-cart--final{
+    /* height: 30rem; */
+    background-color: var(--black-trans);
+}
+
+.ct-cart--final h2{
+    font-size: 2.2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+
+.ct-cart--btn{
+    border: none;
+    width: 90%;
+    margin: 1rem;
+}
+
+
+/* Shop and Card Merchand */
+
+.ct-shop--item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+
+.card-merchandise{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #0000008a;
+}
+
+.card-merchandise img{
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.card-merchandise > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-mCard--details{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+
+    padding: 1rem;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.ct-mCard--details p:nth-child(2){
+    font-size: 2.4rem;
+    color: var(--gold-primary);
+}
+
+.card-merchandise button,
+.ct-cart--btn,
+.admin-ctr--addShop button{
+    border: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ddd;
+    background-color: rgb(6, 111, 69);
+}
+
+.match-dt{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* COntact ME */
+
+.ct-contact--main{
+    display: flex;
+    gap: 1.8rem;
+    margin: 2rem;
+}
+
+.ct-contact--address{
+    width: 50%;
+    background-color: #0000008a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #ddd;
+
+    padding-left: 4rem;
+    gap: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.ct-contact--address > div > p:last-child {
+    font-size: 80%;
+}
+
+.ct-contact--form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #ffffff24;
+    box-shadow: 0 0 2px black;
+}
+
+.ct-contact--form h3{
+    font-size: 2.4rem;
+    margin-bottom: 3.6rem;
+    height: max-content;
+    font-weight: 900;
+}
+
+.ct-contact--form input, textarea,
+.admin-ctr--addShop input{
+    width: 100%;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 0px #252323ce;
+    background-color: var(--black-trans);
+    color: #ddd;
+}
+
+.ct-contact--form textarea{
+    height: 10rem;
+}
+
+.ct-contact--form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-loginSignup{
+    padding: 4rem;
+}
+
+.ct-ls-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ct-ls-main>button:last-child{
+    border: none;
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 1rem;
+    margin: 1rem;
+    color: #eee;
+}
+
+
+.order-summary td:last-child{
+    text-align: end;
+}
+
+
+.slide{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    display: none;
+}
+
+  
+  .table-container {
+    max-height: 300px;
+    overflow-y: auto; 
+    overflow-x: auto;
+  }
+  
+  .table-container table {
+    width: 200%; 
+    border-collapse: collapse; 
+  }
+  
+
+  /* Gallery */
+
+  .ct-imgGallery{
+    display: flex ;
+    flex-direction: column;
+  }
+
+  .ct-imgGallery h2{
+    color: var(--gold-secondary);
+  }
+
+  .ct-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .ct-gallery img{
+    max-width: 70%;
+    height: 100%;
+  }
+
+
+  /* LoggedIn */
+
+  .ct-user--loggedIn > h3{
+    font-size: 3.6rem;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+
+  .ct-user--loggedIn a{
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    background-color: #333333a0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 4px white;
+  }
+
+  .ct-user--loggedIn  a:link,
+  .ct-user--loggedIn  a:visited{
+    color: #ddd;
+  }
+
+
+
+
+  /* ADMIN  */
+
+  .ct-adminCtr{
+    padding: 4rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-ctr--addShop{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 2rem;
+    width: 300px;
+    background-color: var(--black-trans);
+   align-items: center;
+  }
+
+  .admin-addItem {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .admin-ctr--addShop img{
+    max-width: 90%; 
+    max-width: 90%;
+    padding: 1rem;
+}
+
+  .admin-ctr--addShop button{
+    width: 100%;
+    font-size: 2rem;
+  }
+
+
+  .isAdmin-hidden{
+    display: none;
+  }
+
+  .cross{
+    font-size: 3rem;  
+    padding: 1rem;
+    text-align: right;
+  }
+
+/* MEDIA QUERIES */
+
+.cross{
+    display: none;
+}
+
+  @media screen and (max-width: 1140px) {
+    .ct-nav--links{
+        margin-right: 2rem;
+    }
+
+    .ct-nav--links li:not(:last-child){
+        padding-right: 2rem;
+    }
+
+  }
+
+  /* 9/16 * 100 = 56.25 */
+  @media screen and (max-width: 995px) {
+   html{
+    font-size: 8px;
+   }
+
+   .ct-pStats--data li p:first-child{
+    font-size: 4.4rem;
+    word-wrap: break-word;
+   }
+
+    .ct-aPersonal--name{
+        font-size: 4.4rem;
+    }
+   
+      .ct-aPersonal--name span{
+       letter-spacing: -5px;
+      };
+
+      .ct-aPersonal--selfImg img{
+          height: 30rem;
+      }
+
+      .background-video img{
+        height: 70%;
+        width: auto;
+    }
+
+    .ct-gallery img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 805px){
+    
+    .ct-aPersonal--name{
+        font-size: 3rem;
+    }
+
+    .ct-aPersonal--name span{
+        letter-spacing: 0;
+    }
+
+    .ct-aPersonal--selfImg img{
+        height: 30rem;
+    }
+
+    .ct-ah--list{
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .ct-ah--list img{
+        max-width: 80%;
+        margin-top: 0.5rem;
+
+    } 
+
+
+    .ct-gallery{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+  
+
+  }
+
+
+  @media screen and (max-width: 692px){
+    .ct-nav--links li:not(:last-child){
+        padding-right: 1rem;
+    }
+
+    .ct-nav--links li{
+        font-size: 1.6rem;
+    }
+
+    .ct-aPersonal--selfImg img{
+        height: 20rem;
+    }
+
+    .ct-aPersonal--more{
+        font-size: 1.4rem;
+    }
+
+    .ct-pStats--head,
+    .ct-seasonStats h2{
+        font-size: 3.2rem;
+    }
+
+    .ct-pStats--data li p:first-child{
+        font-size: 3.2rem;
+        word-wrap: break-word;
+    }
+
+    .ct-ah--head{
+        font-size: 3.2rem;
+    }
+
+    .ct-records h2,
+    .ct-misc h2{
+        font-size: 3.6rem;
+    }
+
+    .ct-rAchieve > div > p:not(:first-child){
+        font-size: 1.4rem;
+    }
+
+    .ct-rAchieve > div > p:first-child {
+        font-size: 3.2rem;
+
+    }
+
+    table{
+        font-size: 1.2rem;
+    }
+
+    table th, table td{
+        padding: 0.3rem;
+    }
+
+    table th, table td:first-child {
+        font-size: 1.2rem;
+        width: fit-content;
+    }
+
+    .ct-misc h3{
+        font-size: 2.4rem;
+    }
+
+    .ct-misc--div p{
+        font-size: 1.6rem;
+    }
+
+    .order-summary h2{
+        font-size: 1.8rem;
+    }
+
+    .background-video{
+        flex-direction: column;
+        height: fit-content;
+        gap: 4rem;
+    }
+
+    .background-video img{
+        width: 100%;
+    }
+
+    .background-video video{
+        width: 100%;
+    }
+
+    .ct-shop--item{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .ct-contact--main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    .ct-contact--form{
+        width: 100%;
+    }
+
+    .ct-contact--address{
+        width: 100%;
+        padding: 5rem;
+    }
+
+  }
+
+
+  @media screen and (max-width: 601px){
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .ct-navbar img{
+        height: 10rem;
+        margin-left: 1rem;
+    }
+
+    .ct-nav--links {
+        font-size: 1.6rem;
+    }
+
+    .ct-seasonStats{
+        padding: 2rem;
+    }
+
+    .ct-cc--merchandise,
+    .ct-cc--ticket{
+        font-size: 2rem;
+    }
+
+    .slide{
+        font-size: 2rem;
+    }
+
+    .ct-shop--item{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .ct-ah--head {
+        max-width: 100%;
+        padding: 2.5rem;
+    }
+
+
+    .ct-aHonor{
+        flex-direction: column;
+    }
+
+    .ct-ah--list div img{
+        /* background-color: red; */
+        width: 50%;
+        height: auto;
+    }
+
+    .ct-ah--list{
+        grid-template-columns: 1fr;
+       text-align: center;
+
+
+    }
+
+    
+    .ct-ah--list div:nth-child(2){
+        grid-row: 4;
+    }
+
+    .ct-ah--list div:nth-child(6){
+        grid-row: 8;
+    }
+
+    .ct-record--sub{
+        grid-template-columns: 1fr;
+    }
+
+    .ct-rAchieve{
+        text-align: center;
+    }
+ 
+
+  }
+
+  @media screen and (max-width: 530px){
+
+
+    .ct-navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+        padding: 3rem;
+    }
+    
+    .ct-nav--links {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .ct-nav--links li{
+        font-size: 1.8rem;
+    }
+
+    .ct-navbar  img{
+        height: 200px;
+
+    }
+
+    .ct-aPersonal{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .ct-aPersonal--name{
+        text-align: center;
+    }
+
+    .ct-pStats--data{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ct-rAchieve{
+        padding: 1rem;
+        
+    }
+
+    .ct-misc--div{
+        grid-template-columns: 1fr;
+    }
+
+    .ct-cc--merchandise,
+    .ct-cc--ticket{
+        font-size: 1.6rem;
+    }
+
+    .ct-ls-main form{
+        width: 80%;
+    }
+
+    .ct-gallery{
+        grid-template-columns: 1fr;
+
+    }
+
+    .ct-gallery img{
+        height: 90%;
+    }
+
+    .ct-imgGallery {
+        padding: 10rem;
+    }
+
+    .navHidden{
+        display: none;
+        display: none;
+    }
+
+    .cross{
+        position: absolute;
+        right: 0;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        display: block;
+        z-index: 10000;
+        color: white;
+    }
+
+
+
+  }
+
+
+  /* ANIMAIONS */
+
+
